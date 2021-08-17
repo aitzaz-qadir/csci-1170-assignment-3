@@ -1,0 +1,319 @@
+/* 
+ * In order to implement the website to work in dark mode,
+ * the back-ground color will need to change to something
+ * darker such as black. To distinguish the sections from
+ * the body, sections can also be changed to slightly more
+ * lighter shaded colour like dim-grey or rgb(40, 40, 40).
+ * In order to make text visible, the font color will need
+ * to change to white. Further styling can also be done by
+ * changing font colors of different headings to colours
+ * like yellow or cyan.
+ * 
+ */
+
+
+/* 
+ * In the root, I have defined a custom color pallette for two themes.
+ * Color pallete was inspired by ColorHunt.co
+ * Author: Gal Shir
+ * Date Accessed: 4th November 2020
+ * URL: https://colorhunt.co/palettes/dark
+ *
+ */
+
+:root {
+    /* Light Mode Color Variables */
+    --light-bg-color: #FEFEFE;
+    --light-ft-color: #121212;
+
+    /* Dark Mode Color Variables */
+    --dark-bg-color: #1E1E1E;
+    --dark-ft-color: #EEEEEE;
+}
+
+/* Here I have defined styles which will be applied when dark mode is toggled. */
+
+.dark-mode {
+    color: var(--dark-ft-color);
+    background-color: var(--dark-bg-color);
+}
+
+.dark-mode a {
+    color: aqua;
+}
+
+.dark-mode a:visited {
+    color: violet;
+}
+
+.dark-mode #btn-dark-light-mode {
+    color: white;
+    background-color: black;
+    border: 2px solid black;
+}
+
+.dark-mode #btn-dark-light-mode:hover {
+    color: black;
+    background-color:lightgrey;
+}
+
+.dark-mode #personal-details > img {
+    box-shadow: 5px 5px 5px black;
+}
+
+.dark-mode #personal-details p > img {
+    filter: invert(100%);
+}
+
+/* Below are the default styles being applied to the website. */
+
+body {
+    width : 88vw;
+    margin: auto;
+    height: 100%;
+    overflow: auto;
+    font-family: sans-serif;
+    transition-duration: 0.15s;
+    background-color: var(--light-bg-color1);
+}
+
+li {
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+h2, h3, h4, p {
+    margin-left: 15px;
+}
+
+body > section {
+    padding: 10px 0;
+}
+
+#personal-details {
+    float: left;
+    width:  30%;
+    margin-top: 10px;
+}
+
+#personal-details > h1 {
+    margin-top: 45px;
+    text-align: center;
+}
+
+#personal-details > img {
+    float: left;
+    margin-top: 10px;
+    margin-left: 15px;
+    box-shadow: 5px 5px 5px grey;
+}
+
+#personal-details > p {
+    clear: left;
+    float: left;
+    margin-left: 5px;
+    margin-bottom: 10px;
+}
+
+#personal-details p > img {
+    height: 25px;
+    width : 25px;
+    margin-left: 10px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+#links {
+    float: left;
+    width: 70%;
+    margin-top: 10px;
+}
+
+#links ul > li {
+    float: left;
+    margin-right: 40px;
+}
+
+#exp-summary {
+    width: 70%;
+    float: left;
+}
+
+#experience {
+    width: 70%;
+    float: right;
+}
+
+#skills {
+    width: 30%;
+    float: left;
+}
+
+#edu {
+    width: 30%;
+    float: left;
+    clear: both;
+}
+
+#btn-dark-light-mode {
+    top: 10px;
+    right: 10px;
+    width: 100px;
+    height: 50px;
+    position: fixed;
+    border-radius: 5px;
+    transition-duration: 0.2s;
+    background-color: lightgrey;
+    border: 2px solid lightgrey;
+}
+
+#btn-dark-light-mode:hover {
+    color: white;
+    background-color:black;
+}
+
+/* Media Query and CSS Styles For Mobile Devices */
+@media screen and (max-width: 840px) {
+
+    body {
+        gap: 10px;
+        width: 90vw;
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        grid-template-rows: repeat(6, auto);
+    }
+
+    h2, h3, h4 {
+        text-align: center;
+    }
+
+    #personal-details {
+        float: none;
+        width: auto;
+        display: grid;
+        grid-template-rows: repeat(6, auto);
+    }
+
+    #personal-details > img {
+        justify-self: center;
+    }
+
+    #personal-details > h1 {
+        margin-top: 30px;
+    }
+
+    #personal-details > p {
+        clear: none;
+        float: none;
+        margin-left: 35px;
+    }
+
+    #links {
+        width: auto;
+        float: none;
+    }
+    
+    #links ul > li {
+        clear: left;
+        margin-top: 5px;
+    }
+
+    #exp-summary {
+        float: none;
+        width: auto;
+    }
+
+    #experience {
+        float: none;
+        width: auto;
+    }
+
+    #skills {
+        width: auto;
+    }
+
+    #edu {
+        float: none;
+        clear: none;
+        width: auto;
+    }
+
+    #edu h3 {
+        padding-top: 20px;
+    }
+
+
+}
+
+/* Media Query and CSS Styles For Tablets Devices */
+@media screen and (min-width: 840px) and (max-width: 1200px) {
+
+    body {
+        gap: 15px;
+        width: 95vw;
+        display: grid;
+        padding: 10px;
+        align-items: center;
+        justify-items: center;
+        grid-template-rows: repeat(3, auto);
+        grid-template-columns: repeat(2, auto);
+    }
+
+    #personal-details {
+        float: none;
+        width: 100%;
+        display: grid;
+        grid-column:1/-1;
+        grid-template-rows: repeat(3, auto);
+        grid-template-columns: repeat(3, auto);
+    }
+    
+    #personal-details > img {
+        grid-row:1/-1;
+        grid-column:1/2;
+        justify-self: center;
+    }
+    
+    #personal-details > p {
+        clear: none;
+        float: none;
+    }
+
+    #links {
+        width: auto;
+        float: none;
+        grid-column: 1/-1;
+    }
+   
+    #links ul > li {
+        margin-top: 5px;
+    }
+ 
+    #exp-summary {
+        float: none;
+        width: auto;
+        grid-column: 1/-1;
+    }
+
+    #experience {
+        float: none;
+        width: auto;
+    }
+
+    #skills {
+        width: auto;
+    }
+
+    #edu {
+        float: none;
+        clear: none;
+        width: auto;
+        grid-column: 1/-1;
+    }
+
+    #edu h3 {
+        padding-top: 10px;
+    }
+
+}

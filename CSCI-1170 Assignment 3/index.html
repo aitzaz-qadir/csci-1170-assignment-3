@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+	<!-- Head container with title, metadata and link to stylesheet. -->
+	<head>
+		<!-- Title of Web-page -->
+		<title>Online Resumé/CV</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- 
+		  CSS Resets: Normalize.css file
+		  Authot: Nicolas Gallagher
+		  Date Accessed: 3rd November 2020
+		  URL: https://necolas.github.io/normalize.css/
+		 -->
+		<link rel="stylesheet" href="css/normalize.css">
+		<!-- Additional CSS Stylesheet -->
+		<link rel="stylesheet" href="css/main.css">
+	</head>
+	<!-- Body container with all sections. -->
+	<body>
+
+		<!-- Personal Information Section -->
+		<section id="personal-details">
+			<!-- Profile Picture created by Author.-->
+			<img src="img/photo.jpg" alt="Profile Picture">
+			<h1>Aitzaz Qadir Khowaja</h1>
+			<br>
+			<!-- 
+				Each paragraph tag has one icon and the contact.
+				All 4 i-cons are styled similarly using various
+				combinators on CSS.
+			 -->
+			<p>
+				<img src="img/phone.png" alt="Icon">
+				<b>Phone:  </b> +1 (902) 989-0499 
+			</p>
+			<p>
+				<img src="img/email.png" alt="Icon">
+				<b>Email:  </b><a href="mailto:aitzazqk@gmail.com"> aitzazqk@gmail.com</a>
+			</p>
+			<p>
+				<img src="img/linkedin.png" alt="Icon">
+				<b>Website:</b><a href="https://www.linkedin.com/in/aitzaz-qadir"> Personal LinkedIn</a>
+			</p>
+			<p>
+				<img src="img/github.png" alt="Icon">
+				<b>GitHub: </b><a href="https://github.com/aitzaz-qadir"> aitzaz-qadir</a>
+			</p>
+		</section>
+
+		<!-- Quick Links Section -->
+		<section id="links">
+			<h2>Links</h2>
+			<!-- Unordered list of all links. -->
+			<ul>
+				<!-- 
+					Each links is styled similarly in the CSS file to
+					give them some space from each other and make them
+					to be horizontal.
+				 -->
+				<li><a href="#exp-summary">Experience Summary</a></li>
+				<li><a href="#experience">Experience</a></li>
+				<li><a href="#skills">Skills</a></li>
+				<li><a href="#edu">Education</a></li>
+				<li><a href="https://www.cs.dal.ca/" target="_blank">Dalhousie CompSci</a></li>
+			</ul>
+		</section>
+
+		<!-- Summary Section -->
+		<section id="exp-summary">
+			<h2>Experience Summary</h2>
+			<p>
+				Currently pursuing a Bachelor of Science focused on Computer Science & Networking.
+				Actively looking for internships in tech-related fields such as AI, Robotics, Computer 
+				Hardware/Software to gain critical industry experience and part-time jobs in Customer 
+				Service/Interaction to develop communication & teamwork skills.
+			</p>
+		</section>
+
+		<!-- Experiences Section -->
+		<section id="experience">
+			<h2>Experience</h2>
+			<!-- 1st Role Section -->
+			<section id="role1" class="exp-role">
+				<h3>Head Delegate</h3>
+				<h4>APTech HTML & Web Design, 2018</h4>
+				<p>
+					Part of a 4-person directorate to create a functioning catering style business 
+					website for a local restaurant called “Khanzada Pak wan House & Biryani Center”.
+				</p>
+				<ul>
+					<li>Team Leadership</li>
+					<li>Intensive Research Work</li>
+					<li>Co-ordination to create a website</li>
+					<li>Website design responsibilities</li>
+				</ul>
+			</section>
+		</section>
+
+		<!-- Skills Bullet List Section -->
+		<section id="skills">
+			<h2>Skills</h2>
+			<!-- Unordered list of all skills -->
+			<ul>
+				<li>Discreet Mathematics and Object-Oriented Programming</li>
+				<li>Community Service</li>
+				<li>Event Management</li>
+				<li>Effective Oral and Written Communication</li>
+				<li>Teamwork and Collaboration</li>
+				<li>Ability to maintain attention to detail</li>
+				<li>Learning and picking up on new skills quickly</li>
+				<li>Beginner level Java</li>
+				<li>Research work</li>
+			</ul>
+		</section>
+
+		<!-- Education Section -->
+		<section id="edu">
+			<h2>Education</h2>
+			<!-- 1st Education Section -->
+			<h3>Bachelor of Computer Science</h3>
+			<h4>Dalhousie University, 2020-2024</h4>
+			<p>Completed Specialized CS course in Experimental Robotics and Applied for the Co-operative education Program</p>
+			<ul><li>Current GPA; 4.15/4.30</li></ul>
+			<!-- 2nd Education Section -->
+			<h3>GCE A Levels</h3>
+			<h4>Beaconhouse School System, 2017-2019</h4>
+			<p>Mainly focused on scientific subjects including Mathematics, Physics, Chemistry and Computer Science as well as participating in Football & Table Tennis</p>
+			<ul>
+				<li>A’ Grade in all 4 subjects</li>
+				<li>Council Member for Science & Technology Society</li>
+				<li>Council Member for the Gaming Society</li>
+				<li>Head Delegate at IBA Mathematica Competition (2018)</li>
+				<li>Completion of Aptech HTML & CSS Web Design Course (2018)</li>
+			</ul>
+			<!-- 3rd Education Section -->
+			<h3>GCE O Levels</h3>
+			<h4>Beaconhouse School System, 2013-2016</h4>
+			<p>Majored in multiple required subjects with main focus again on science and was involved in many extra curricular activities</p>
+			<ul>
+				<li>4 A Grades & 5 B Grades</li>
+				<li>Participation in local Rover Scouts Unit (2012-2015)</li>
+				<li>Participation in National Videography Contest “Hum Se Hai Pakistan” (2015)</li>
+				<li>Event Manager in Annual Bake Sale Competition (2014)</li>
+				<li>Participation in Science Project Competition (2016)</li>
+			</ul>
+			<!-- Each education was not contained in its own section with id/classes similar to job roles as it was not specified in the annotated sample -->
+		</section>
+		<br>
+
+		<!-- New Dark Mode Button to toggle the dark mode theme. -->
+		<button id="btn-dark-light-mode" title="Click to toggle dark mode" onclick=toggleDarkMode()>Dark Mode</button>
+
+		<!-- Link to the javascript file provided at the end. -->
+		<script src="js/scripts.js" type="text/javascript"></script>
+
+	</body>
+</html>
